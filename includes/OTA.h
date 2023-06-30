@@ -46,7 +46,7 @@ void setup_OTA(const char* hostname) {
   });
   
   ArduinoOTA.onError([](ota_error_t error) {
-    Serial.printf("Error[%u]: ", error);
+    Serial.printf("OTA Upload Error[%u]: ", error);
     if (error == OTA_AUTH_ERROR) Serial.println("\nAuth Failed");
     else if (error == OTA_BEGIN_ERROR) Serial.println("\nBegin Failed");
     else if (error == OTA_CONNECT_ERROR) Serial.println("\nConnect Failed");
